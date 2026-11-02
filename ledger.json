@@ -6,7 +6,7 @@
       "title": "Write meta description for Orange & Clove",
       "priority": 2,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -25,10 +25,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-02T21:54:45.625Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-02T21:56:43.265Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-02T21:56:46.476Z"
         }
       ],
       "started_at": "2026-11-02T21:54:45.625Z",
-      "updated_at": "2026-11-02T21:54:45.625Z"
+      "updated_at": "2026-11-02T21:56:46.476Z",
+      "output": "site/content/products/orange-and-clove.md: meta_description changed in commit b248cce",
+      "verification": "evidence/verify-meta-orange-and-clove-20261102T215637Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/orange-and-clove/"
     },
     {
       "id": "meta-wild-fig-wax-melts",

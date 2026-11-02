@@ -1,0 +1,42 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/orange-and-clove/",
+  "passed": false,
+  "started_at": "2026-11-02T21:55:02.408Z",
+  "finished_at": "2026-11-02T21:56:03.143Z",
+  "must_contain": [
+    "<meta name=\"description\" content=\"Sweet orange, clove and cinnamon bark in a frosted glass jar. 200 g of soy wax with around 45 hours of burn time. Our winter kitchen in a jar.\">"
+  ],
+  "must_not_contain": [],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-02T21:55:02.408Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"Sweet orange, clove and cinnamon bark in a frosted glass jar. 200 g of soy wax with around 45 hours of burn time. Our winter kitchen in a jar.\">"
+      ],
+      "forbidden": []
+    },
+    {
+      "n": 2,
+      "at": "2026-11-02T21:55:32.842Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"Sweet orange, clove and cinnamon bark in a frosted glass jar. 200 g of soy wax with around 45 hours of burn time. Our winter kitchen in a jar.\">"
+      ],
+      "forbidden": []
+    },
+    {
+      "n": 3,
+      "at": "2026-11-02T21:56:02.963Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"Sweet orange, clove and cinnamon bark in a frosted glass jar. 200 g of soy wax with around 45 hours of burn time. Our winter kitchen in a jar.\">"
+      ],
+      "forbidden": []
+    }
+  ],
+  "id": "meta-orange-and-clove"
+}
