@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://uitzichtmedia.github.io/atlas-harbor-pine/sitemap.xml

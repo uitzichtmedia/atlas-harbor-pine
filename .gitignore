@@ -1,0 +1,14 @@
+# Secrets never belong in this repository
+.env
+.env.*
+*.env
+secrets/
+*service-account*.json
+*-key.json
+# Local Claude Code settings (personal approvals)
+.claude/settings.local.json
+# OS / editor noise
+.DS_Store
+Thumbs.db
+node_modules/
+*.tmp

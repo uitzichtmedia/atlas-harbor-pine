@@ -1,0 +1,10 @@
+{
+  "site_name": "Harbor & Pine Candles",
+  "base_url": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+  "seo": { "title_max": 60, "meta_min": 70, "meta_max": 160 },
+  "evidence_max_age_hours": 24,
+  "ledger_stale_minutes": 180,
+  "verify": { "wait_minutes": 10, "interval_seconds": 30 },
+  "limits": { "max_changes_per_day": 5 },
+  "gsc": { "site_url": "", "days": 28, "row_limit": 250 }
+}

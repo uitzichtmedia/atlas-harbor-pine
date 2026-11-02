@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- macOS launchd job: runs the Atlas daily loop every day at 07:12 local time.
+     1. Replace /Users/YOU/atlas-harbor-pine with the real path of your repository (twice).
+     2. Copy this file to ~/Library/LaunchAgents/academy.atlas.daily.plist
+     3. Load it:   launchctl load ~/Library/LaunchAgents/academy.atlas.daily.plist
+        Test now:  launchctl start academy.atlas.daily
+        Remove:    launchctl unload ~/Library/LaunchAgents/academy.atlas.daily.plist
+     The Mac must be awake (not asleep) at 07:12; a missed run starts when the Mac wakes. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>academy.atlas.daily</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/YOU/atlas-harbor-pine/scheduling/self-hosted/run-atlas.sh</string>
+    <string>daily</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/YOU/atlas-harbor-pine</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>12</integer></dict>
+  <key>StandardOutPath</key><string>/tmp/atlas-launchd.log</string>
+  <key>StandardErrorPath</key><string>/tmp/atlas-launchd.log</string>
+</dict>
+</plist>
