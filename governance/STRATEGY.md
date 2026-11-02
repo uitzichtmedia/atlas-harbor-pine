@@ -11,7 +11,7 @@ Owner: Sam (fictional) · Period: 2026-11-01 – 2027-01-31 · Next review: 2026
 
 ### Bets per goal
 **G1 — More orders from search**
-- Bet: rewrite meta descriptions and intros for the 30 product pages with most impressions and CTR < 2%. · Evidence: Search Console, Oct. · First check: 2026-11-29 (prediction: CTR +0.5 pt).
+- Bet: rewrite meta descriptions and intros for the product pages with most impressions and CTR < 2%. · Evidence: Search Console, Oct. · First check: 2026-11-29 (prediction: CTR +0.5 pt).
 - Not doing: blog topics without search demand — no evidence they sell candles.
 
 **G2 — Convert gift traffic**

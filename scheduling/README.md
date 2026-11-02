@@ -22,7 +22,7 @@ Cloud scheduled tasks are a research-preview feature of Claude Code on the web; 
 1. Go to **claude.ai/code/routines** (or type `/schedule` in Claude Code) and choose **New scheduled task**.
 2. **Repository:** your copy of this starter.
 3. **Environment → network access:** the default ("Trusted") list does **not** include GitHub Pages sites. Edit the
-   environment: set network access to **Custom**, add `YOUR-GITHUB-USERNAME.github.io` to **Allowed domains**, and tick
+   environment: set network access to **Limited** (older screens call it **Custom**), add `YOUR-GITHUB-USERNAME.github.io` to **Allowed domains**, and tick
    **Also include default list of common package managers**. Without this, `collect-site` and `verify-live` fail with HTTP 403.
 4. **Prompt:** paste the full text of `scheduling/cloud-daily.txt` (or one of the three files for the 3-task variant).
 5. **Schedule:** daily. Pick a few minutes past the hour (for example 07:12); runs exactly on the hour may start late.

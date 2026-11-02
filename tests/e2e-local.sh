@@ -97,4 +97,5 @@ echo; echo "# origin (bare repo) history:"; git -C "$T/origin.git" log --oneline
 echo; echo "# live meta tag served by the Pages simulator:"; curl -s "${BASE}products/amber-evening/" | grep 'name="description"'
 # 7. self-hosted wrapper with a stand-in claude
 mkdir -p "$T/bin"; printf '#!/usr/bin/env bash\necho "FAKE claude called with: $1" | cut -c1-120; echo "args: ${@:2}"\n' > "$T/bin/claude"; chmod +x "$T/bin/claude"
-PATH="$T/bin:$PATH" ATLAS_LOG_DIR="$T/logs" bash scheduling/self-hosted/run-atlas.sh plan; echo "[run-atlas.sh exit $?]"; cat "$T/logs/"*.log
+PATH="$T/bin:$PATH" ATLAS_LOG_DIR="$T/logs" bash scheduling/self-hosted/run-atlas.sh plan; RC=$?; echo "[run-atlas.sh exit $RC]"; cat "$T/logs/"*.log
+if [ "$RC" -ne 0 ]; then echo "FAIL: run-atlas.sh exited $RC"; exit 1; fi

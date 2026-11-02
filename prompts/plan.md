@@ -69,6 +69,8 @@ in any state except FAILED (if FAILED, use the id with `-2`, `-3` … and mentio
   a product page; small CTR gain likely (G1)."* Without Search Console data, say *"no traffic data — expected value unknown"*.
 - Risk: `low`, `medium` or `high` + why. Changing a product **title** is `medium` (it changes what shoppers see on the page).
 - At most **5 new READY tasks** per run, and never more than **10 READY tasks** in the ledger in total. Highest priority first.
+- Every issue you leave without a task (limit reached, not plannable, already in the ledger) goes in the plan commit message body
+  as one line `deferred: <issue code> <page> — <reason>`, so nothing the evidence shows is silently dropped.
 
 ### 5. Write the new text yourself (the executor applies it verbatim)
 - Use **only facts that are already in the product file** (its title and body text). Do not mention the price. Never add claims about
@@ -108,7 +110,7 @@ No Search Console data → leave it waiting and mention it once in your final li
 ```
 node ops/ledger.mjs list
 git add ledger.json evidence health.json governance/DECISIONS.md governance/CURRENT.md
-git commit -m "atlas(plan): <n> new tasks"
+git commit -m "atlas(plan): <n> new tasks" -m "<the deferred: lines, or deferred: none>"
 git push origin HEAD:main
 ```
 If `git commit` says *nothing to commit*, that is fine. If the push is rejected, run `git pull --rebase origin main` once and push again. If it still fails, report it.
