@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-02T21:53:57.767Z",
+  "status": "HEALTHY",
+  "stop": false,
+  "problems": [],
+  "warnings": [],
+  "evidence": {
+    "file": "evidence/site-2026-11-02.json",
+    "collected_at": "2026-11-02T21:53:56.627Z",
+    "mode": "live",
+    "age_hours": 0,
+    "errors": []
+  },
+  "ledger": {
+    "items": 0,
+    "counts": {},
+    "stale": []
+  },
+  "runs_today": 1,
+  "runs": [
+    {
+      "at": "2026-11-02T21:53:52.000Z",
+      "run": "plan",
+      "status": "HEALTHY"
+    }
+  ],
+  "previous_status": "HEALTHY",
+  "changed": false
+}
