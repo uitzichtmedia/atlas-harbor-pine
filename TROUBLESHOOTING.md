@@ -81,5 +81,7 @@ then `git log --oneline -20` and decide.
 - **A test fails after you changed something** — the tests use the original products in `tests/fixtures/`, so Atlas's normal
   edits never break them. A failing test means a script, `atlas.config.json` keys or the build changed. Ask Claude:
   *"Run node --test and explain the first failure. Don't change anything yet."*
-- **Windows:** use PowerShell; commands are the same (`node site/build.mjs`, `node --test`). The scripts use no Unix-only
-  features, but the Windows path has not been tested yet (see TEST-LOG.md).
+- **Windows:** use PowerShell; commands are the same (`node site/build.mjs`, `node --test`). Tested on Windows (GitHub Actions:
+  Windows PowerShell 5.1 and PowerShell 7, Node 18 and 22): all tests, build, collectors, ledger commands, `run-atlas.ps1`.
+  The repository's `.gitattributes` keeps line endings LF, so a rebuild on Windows does not show every file in `docs/` as changed.
+  If `git status` still lists all of `docs/` after a build, your copy predates that file: ask Claude to add it.

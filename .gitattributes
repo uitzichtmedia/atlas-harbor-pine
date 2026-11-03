@@ -1,0 +1,6 @@
+# Keep line endings LF in every checkout (also on Windows with core.autocrlf=true), so a rebuild of docs/ on
+# Windows produces exactly the same files as on macOS/Linux and git status stays clean.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary

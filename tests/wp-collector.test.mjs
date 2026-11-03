@@ -69,3 +69,15 @@ test('write: dated + latest files, valid JSON', async () => {
 test('findings thresholds are configurable', () => {
   assert.equal(findings({ products: [{ id: 1, description_words: 30, images: 1, images_missing_alt: 0 }], pages: [] }, { minDescriptionWords: 20 }).length, 0);
 });
+
+test('read-only: only GET requests without credentials; a URL with a password is refused', async () => {
+  const seen = [];
+  const fetchImpl = async (url, opts = {}) => { seen.push({ method: opts.method ?? 'GET', auth: Object.keys(opts.headers ?? {}).some(h => /authorization|cookie/i.test(h)) });
+    return new Response('[]', { status: 200, headers: { 'content-type': 'application/json' } }); };
+  const ev = await collect('https://shop.example', { fetchImpl });
+  assert.equal(ev.complete, true);
+  assert.ok(seen.length >= 3);
+  assert.ok(seen.every(r => r.method === 'GET' && !r.auth));
+  await assert.rejects(collect('https://atlas:secret-app-password@shop.example', { fetchImpl }), /refused: remove the user name\/password/);
+  assert.equal(seen.length, 3);
+});
