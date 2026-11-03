@@ -135,7 +135,7 @@
       "title": "Rewrite too-short Lavender Hearth meta description",
       "priority": 3,
       "route": "executor",
-      "state": "READY",
+      "state": "EXECUTING",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -164,10 +164,15 @@
           "from": "FAILED",
           "to": "READY",
           "at": "2026-11-03T07:10:25.828Z"
+        },
+        {
+          "from": "READY",
+          "to": "EXECUTING",
+          "at": "2026-11-03T07:15:43.868Z"
         }
       ],
-      "started_at": "2026-11-03T07:06:24.217Z",
-      "updated_at": "2026-11-03T07:10:25.828Z",
+      "started_at": "2026-11-03T07:15:43.868Z",
+      "updated_at": "2026-11-03T07:15:43.868Z",
       "failure": "verify-live FAIL (evidence/verify-meta-lavender-hearth-20261103T070745Z.json): new meta description not found, all 3 attempts HTTP 0 fetch failed; rolled back to snapshot"
     }
   ]
