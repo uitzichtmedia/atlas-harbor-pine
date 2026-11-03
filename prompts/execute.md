@@ -77,8 +77,9 @@ Note the commit id: `git rev-parse --short HEAD`.
 ```
 node ops/verify-live.mjs --ledger-item=<id> --wait-minutes=1.5
 ```
-GitHub Pages usually needs 1–10 minutes to deploy. If it prints `FAIL` and the attempts show HTTP 200 with the old text (or 404),
-run the same command again — **up to 6 times in total** (about 10 minutes). Do not change anything in between.
+GitHub Pages usually needs 1–10 minutes to deploy. If it prints `FAIL` and the attempts show HTTP 200 with the old text, 404,
+or HTTP 0 (`fetch failed`: the site could not be reached, which is often temporary), run the same command again —
+**up to 6 times in total** (about 10 minutes). Do not change anything in between. Only after the 6th `FAIL` go to the rollback in step 7.
 The last line prints `PASS` or `FAIL` and `evidence=evidence/verify-….json`. That file is your proof.
 
 ### 7. Record the result
@@ -91,7 +92,7 @@ Then close it:
 - Otherwise (Search Console is connected and this was a title or meta change) →
   `node ops/ledger.mjs set <id> state=MEASUREMENT_WAIT measure_after="<today + 28 days, YYYY-MM-DD>" prediction="<expected CTR change, e.g. +0.5 pt>"`.
 
-**FAIL after 6 attempts:** roll back (PRINCIPLES 9). Copy the snapshot back over `<file>`, `node site/build.mjs`, then
+**FAIL after 6 runs of verify-live:** roll back (PRINCIPLES 9). Copy the snapshot back over `<file>`, `node site/build.mjs`, then
 ```
 node ops/ledger.mjs set <id> state=FAILED failure="verify-live FAIL (<evidence file>): <what was missing>; rolled back to snapshot"
 git add <file> docs ledger.json evidence
