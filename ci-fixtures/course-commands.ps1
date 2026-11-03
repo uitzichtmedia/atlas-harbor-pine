@@ -78,9 +78,9 @@ git restore site/content/products/orange-and-clove.md
 # --- L5.5 verify-live with double-quoted text (local server) -----------------------------------------------
 $srv = Start-Process node -ArgumentList 'ops/serve.mjs' -PassThru -WindowStyle Hidden
 Start-Sleep -Seconds 6
-$r = Run { node ops/verify-live.mjs --path=products/orange-and-clove/ --must-contain="Our winter kitchen in a jar." --wait-minutes=0.5 --interval=3 --base=http://localhost:8080/ }
+$r = Run { node ops/verify-live.mjs --path=products/orange-and-clove/ --must-contain="Our winter kitchen in a jar." --wait-minutes=0.5 --interval=3 --base=http://127.0.0.1:8080/ }
 Check 'L5.5 verify-live --must-contain="<sentence with spaces>" PASS' ($r.code -eq 0 -and $r.out -match 'PASS') (($r.out -split "`n" | Select-Object -Last 2) -join ' ')
-$r = Run { node ops/verify-live.mjs --path=products/orange-and-clove/ --must-contain="A sentence that is not there" --wait-minutes=0.1 --interval=2 --base=http://localhost:8080/ }
+$r = Run { node ops/verify-live.mjs --path=products/orange-and-clove/ --must-contain="A sentence that is not there" --wait-minutes=0.1 --interval=2 --base=http://127.0.0.1:8080/ }
 Check 'L5.5 verify-live FAIL exit 1' ($r.code -eq 1 -and $r.out -match 'FAIL') "exit $($r.code)"
 Stop-Process -Id $srv.Id -ErrorAction SilentlyContinue
 git restore evidence 2>$null

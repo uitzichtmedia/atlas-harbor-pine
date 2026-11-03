@@ -26,12 +26,12 @@ jobs:
           node --version; git --version; $PSVersionTable.PSVersion
           "core.autocrlf=$(git config core.autocrlf)"
           git ls-files --eol site/content/products/orange-and-clove.md ledger.json
-      - name: EOL diagnosis — build in a clone WITHOUT .gitattributes (as the starter ships today)
+      - name: EOL diagnosis — build in a clone of f6a113f (before .gitattributes)
         continue-on-error: true
         shell: pwsh
         run: |
           $d = Join-Path $env:RUNNER_TEMP 'eol'
-          $sha = (git rev-parse HEAD~1).Trim()
+          $sha = 'f6a113f'
           git clone -q --no-checkout . $d
           Set-Location $d
           git checkout -q $sha
@@ -75,26 +75,26 @@ jobs:
         continue-on-error: true
         shell: powershell
         run: .\ci-fixtures\course-commands.ps1 -Label "ps51-node${{ matrix.node }}"
-      - name: run-atlas.ps1 as shipped — Windows PowerShell 5.1
+      - name: run-atlas.ps1 BEFORE the fix (f6a113f) — Windows PowerShell 5.1 (expected to fail)
         id: wr_orig_51
         continue-on-error: true
         shell: powershell
-        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "orig-ps51-node${{ matrix.node }}"
-      - name: run-atlas.ps1 as shipped — pwsh
+        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper ci-fixtures\run-atlas.orig-f6a113f.ps1 -Label "orig-ps51-node${{ matrix.node }}"
+      - name: run-atlas.ps1 BEFORE the fix (f6a113f) — pwsh (expected to fail)
         id: wr_orig_7
         continue-on-error: true
         shell: pwsh
-        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "orig-pwsh-node${{ matrix.node }}"
-      - name: run-atlas.ps1 candidate fix — Windows PowerShell 5.1
+        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper ci-fixtures\run-atlas.orig-f6a113f.ps1 -Label "orig-pwsh-node${{ matrix.node }}"
+      - name: run-atlas.ps1 as shipped — Windows PowerShell 5.1
         id: wr_fix_51
         continue-on-error: true
         shell: powershell
-        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper ci-fixtures\run-atlas.fixed.ps1 -Label "fix-ps51-node${{ matrix.node }}"
-      - name: run-atlas.ps1 candidate fix — pwsh
+        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "shipped-ps51-node${{ matrix.node }}"
+      - name: run-atlas.ps1 as shipped — pwsh
         id: wr_fix_7
         continue-on-error: true
         shell: pwsh
-        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper ci-fixtures\run-atlas.fixed.ps1 -Label "fix-pwsh-node${{ matrix.node }}"
+        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "shipped-pwsh-node${{ matrix.node }}"
       - name: L3.1 W4-W6 install Claude Code (official script) and verify — Windows PowerShell 5.1
         id: install
         if: matrix.node == '22'
@@ -115,4 +115,7 @@ jobs:
         shell: pwsh
         run: |
           Get-ChildItem $env:RUNNER_TEMP -Filter 'results-*.txt' | ForEach-Object { Get-Content $_.FullName }
+          $bad = Get-ChildItem $env:RUNNER_TEMP -Filter 'results-*.txt' | Get-Content | Where-Object { $_ -match '\| FAIL \|' -and $_ -notmatch 'orig-' -and $_ -notmatch 'ps51-.*claude -p \$Prompt' }
+          "unexpected FAIL lines: $(@($bad).Count)"; $bad
           "steps: tests=${{ steps.tests.outcome }} build=${{ steps.build.outcome }} cmd_pwsh=${{ steps.cmd_pwsh.outcome }} cmd_ps51=${{ steps.cmd_ps51.outcome }} wr_orig_51=${{ steps.wr_orig_51.outcome }} wr_orig_7=${{ steps.wr_orig_7.outcome }} wr_fix_51=${{ steps.wr_fix_51.outcome }} wr_fix_7=${{ steps.wr_fix_7.outcome }} install=${{ steps.install.outcome }}"
+          if (@($bad).Count -gt 0 -or '${{ steps.tests.outcome }}' -ne 'success' -or '${{ steps.build.outcome }}' -ne 'success') { exit 1 }
