@@ -48,7 +48,7 @@
       "title": "Write meta description for Wild Fig Wax Melts",
       "priority": 2,
       "route": "executor",
-      "state": "READY",
+      "state": "BLOCKED",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -62,14 +62,22 @@
       "acceptance": "Live page products/wild-fig-wax-melts/ serves the new meta description and no longer the old one (verify-live --ledger-item)",
       "evidence": "evidence/site-2026-11-02.json",
       "created_at": "2026-11-02T21:54:29.398Z",
-      "history": []
+      "history": [
+        {
+          "from": "READY",
+          "to": "BLOCKED",
+          "at": "2026-11-03T06:52:18.145Z"
+        }
+      ],
+      "blocker": "sandbox/rollback-test: parked so the rollback test has exactly one READY task (test harness, B27)",
+      "updated_at": "2026-11-03T06:52:18.145Z"
     },
     {
       "id": "title-pine-forest-travel-tin",
       "title": "Make travel tin title unique",
       "priority": 2,
       "route": "executor",
-      "state": "READY",
+      "state": "BLOCKED",
       "not_before": null,
       "goal": "G1",
       "action": "edit_title",
@@ -83,14 +91,22 @@
       "acceptance": "Live page products/pine-forest-travel-tin/ serves the new title and no longer the old one (verify-live --ledger-item)",
       "evidence": "evidence/site-2026-11-02.json",
       "created_at": "2026-11-02T21:54:29.439Z",
-      "history": []
+      "history": [
+        {
+          "from": "READY",
+          "to": "BLOCKED",
+          "at": "2026-11-03T06:52:18.184Z"
+        }
+      ],
+      "blocker": "sandbox/rollback-test: parked so the rollback test has exactly one READY task (test harness, B27)",
+      "updated_at": "2026-11-03T06:52:18.184Z"
     },
     {
       "id": "meta-amber-evening",
       "title": "Rewrite too-short Amber Evening meta description",
       "priority": 3,
       "route": "executor",
-      "state": "READY",
+      "state": "BLOCKED",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -104,7 +120,15 @@
       "acceptance": "Live page products/amber-evening/ serves the new meta description and no longer the old one (verify-live --ledger-item)",
       "evidence": "evidence/site-2026-11-02.json",
       "created_at": "2026-11-02T21:54:29.478Z",
-      "history": []
+      "history": [
+        {
+          "from": "READY",
+          "to": "BLOCKED",
+          "at": "2026-11-03T06:52:18.212Z"
+        }
+      ],
+      "blocker": "sandbox/rollback-test: parked so the rollback test has exactly one READY task (test harness, B27)",
+      "updated_at": "2026-11-03T06:52:18.212Z"
     },
     {
       "id": "meta-lavender-hearth",

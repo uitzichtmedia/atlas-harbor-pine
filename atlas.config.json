@@ -1,6 +1,6 @@
 {
   "site_name": "Harbor & Pine Candles",
-  "base_url": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+  "base_url": "https://uitzichtmedia.github.io/atlas-harbor-pine-rollback-sandbox-does-not-exist/",
   "seo": { "title_max": 60, "meta_min": 70, "meta_max": 160 },
   "evidence_max_age_hours": 24,
   "ledger_stale_minutes": 180,
