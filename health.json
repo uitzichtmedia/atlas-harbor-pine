@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02T21:56:52.337Z",
+  "checked_at": "2026-11-03T07:06:04.612Z",
   "status": "HEALTHY",
   "stop": false,
   "problems": [],
@@ -8,18 +8,19 @@
     "file": "evidence/site-2026-11-02.json",
     "collected_at": "2026-11-02T21:53:56.627Z",
     "mode": "live",
-    "age_hours": 0,
+    "age_hours": 9.2,
     "errors": []
   },
   "ledger": {
     "items": 5,
     "counts": {
       "DONE": 1,
-      "READY": 4
+      "BLOCKED": 3,
+      "READY": 1
     },
     "stale": []
   },
-  "runs_today": 3,
+  "runs_today": 1,
   "runs": [
     {
       "at": "2026-11-02T21:53:52.000Z",
@@ -34,6 +35,11 @@
     {
       "at": "2026-11-02T21:56:52.337Z",
       "run": "brief",
+      "status": "HEALTHY"
+    },
+    {
+      "at": "2026-11-03T07:06:04.612Z",
+      "run": "execute",
       "status": "HEALTHY"
     }
   ],
