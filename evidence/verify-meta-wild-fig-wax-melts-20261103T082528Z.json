@@ -1,0 +1,31 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/wild-fig-wax-melts/",
+  "passed": true,
+  "started_at": "2026-11-03T08:24:58.169Z",
+  "finished_at": "2026-11-03T08:25:28.695Z",
+  "must_contain": [
+    "<meta name=\"description\" content=\"Wax melts with ripe fig, green leaves and a hint of cedar. Six soy wax melts per pack, in plastic-free packaging, for an oil burner or warmer.\">"
+  ],
+  "must_not_contain": [],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-03T08:24:58.169Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"Wax melts with ripe fig, green leaves and a hint of cedar. Six soy wax melts per pack, in plastic-free packaging, for an oil burner or warmer.\">"
+      ],
+      "forbidden": []
+    },
+    {
+      "n": 2,
+      "at": "2026-11-03T08:25:28.560Z",
+      "status": 200,
+      "missing": [],
+      "forbidden": []
+    }
+  ],
+  "id": "meta-wild-fig-wax-melts"
+}

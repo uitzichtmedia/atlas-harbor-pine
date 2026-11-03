@@ -48,7 +48,7 @@
       "title": "Write meta description for Wild Fig Wax Melts",
       "priority": 2,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -67,10 +67,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-03T08:24:45.620Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-03T08:25:32.806Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-03T08:25:32.861Z"
         }
       ],
       "started_at": "2026-11-03T08:24:45.620Z",
-      "updated_at": "2026-11-03T08:24:45.620Z"
+      "updated_at": "2026-11-03T08:25:32.861Z",
+      "output": "site/content/products/wild-fig-wax-melts.md: meta_description changed in commit 923d5f7",
+      "verification": "evidence/verify-meta-wild-fig-wax-melts-20261103T082528Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/wild-fig-wax-melts/"
     },
     {
       "id": "title-pine-forest-travel-tin",
