@@ -5,7 +5,10 @@
 This repository is the running project of the course. It holds two things:
 
 1. **Harbor & Pine Candles** — a small, fictional candle catalogue. It is a demo, not a shop: nothing is for sale.
-   GitHub Pages publishes it for free from the `docs/` folder.
+   GitHub Pages publishes it for free from the `docs/` folder. Because it has no customers, no money and every change is a
+   git commit you can revert, Atlas may publish to it on its own. **Never do that with your real website:** there Atlas works
+   on a staging copy or drafts, with its own least-privilege login, a tested backup and your approval for anything that
+   publishes (course lecture L7.3).
 2. **Atlas** — an AI operator built with Claude Code. Every day it looks at the live site, picks what is worth fixing,
    makes one careful change, proves the change is live, and writes you a short briefing.
 

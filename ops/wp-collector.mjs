@@ -60,6 +60,10 @@ export function findings(ev, { minDescriptionWords = 40, minPageWords = 150 } = 
 }
 
 export async function collect(site, { fetchImpl = fetch, now = new Date() } = {}) {
+  // Read-only by design: only GET requests to public endpoints, never a login. A URL with a user name or password in it
+  // is refused, so a credential can never end up in a request, an evidence file or the terminal.
+  const u = new URL(site);
+  if (u.username || u.password) throw new Error('refused: remove the user name/password from the site URL - this collector only reads public data');
   const base = site.replace(/\/+$/, '');
   const errors = [];
   const safe = async (label, fn) => { try { return await fn(); } catch (e) { errors.push(`${label}: ${e.message}`); return { ok: false, items: [] }; } };
@@ -100,7 +104,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     console.log(JSON.stringify(r)); process.exit(r.fresh ? 0 : 1);
   }
   if (!cmd) { console.error('usage: node ops/wp-collector.mjs <site-url> [out-dir] | check <file> [maxHours]'); process.exit(2); }
-  const ev = await collect(cmd);
+  let ev;
+  try { ev = await collect(cmd); } catch (e) { console.error(e.message); process.exit(2); }
   const files = write(ev, a || 'evidence');
   console.log(`collected ${ev.counts.pages} pages, ${ev.counts.posts} posts, ${ev.counts.products} products, ${ev.findings.length} findings -> ${files.join(', ')}`);
   if (!ev.complete) { console.error('INCOMPLETE:', ev.errors.join(' | ')); process.exit(1); }

@@ -9,7 +9,7 @@ Atlas does nothing until something starts it. You have two ways. Pick **one**: r
 | Where it runs | Anthropic's cloud, on a fresh copy of your repo | your Mac / Linux / Windows machine |
 | Needs | Claude Pro, Max, Team or Enterprise; GitHub connected to Claude | Claude Code installed and logged in; git push access |
 | Network | must allow your `*.github.io` site (step 3 below) | your normal internet |
-| Status in this starter | prompts written; **not yet run in the cloud** (see TEST-LOG.md) | macOS/Linux script tested with a stand-in for `claude`; Windows untested |
+| Status in this starter | run in the cloud by Claude on the course's demo repository (see TEST-LOG.md) | `run-atlas.sh` and `run-atlas.ps1` tested with a stand-in for `claude` (Windows: Windows PowerShell 5.1 and PowerShell 7 on GitHub Actions); not yet with a real logged-in `claude` on Windows |
 
 **One combined task or three?** Start with **one combined daily task** (`cloud-daily.txt`): one run, one place to look.
 Switch to **three tasks** (`cloud-plan.txt` 07:12, `cloud-execute.txt` 09:12, `cloud-brief.txt` 17:12) when you want the
@@ -59,7 +59,8 @@ First run it by hand once: `bash scheduling/self-hosted/run-atlas.sh daily` (Win
 ```
 3-task variant: three lines with `plan` at 7:12, `execute` at 9:12, `brief` at 17:12.
 
-**Windows (Task Scheduler)** — untested; the steps follow Microsoft's standard procedure.
+**Windows (Task Scheduler)** — `run-atlas.ps1` and the exact `/TR` command line below were tested on Windows (GitHub Actions,
+with a stand-in for `claude`); registering the task itself was not tested. The steps follow Microsoft's standard procedure.
 1. Install Git for Windows, Node.js 18+ and Claude Code; run `claude` once and log in.
 2. Task Scheduler → **Create Basic Task** → name "Atlas daily" → **Daily**, 07:12 → **Start a program**.
 3. Program: `powershell.exe` · Arguments:
@@ -69,4 +70,6 @@ First run it by hand once: `bash scheduling/self-hosted/run-atlas.sh daily` (Win
    "Run only when user is logged on". Tick **Run task as soon as possible after a scheduled start is missed**.
    Command-line alternative:
    `schtasks /Create /TN "Atlas daily" /SC DAILY /ST 07:12 /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\YOU\atlas-harbor-pine\scheduling\self-hosted\run-atlas.ps1 daily"`
+   If the path to your repository contains a space (for example `C:\Users\John Smith\…`), use the Task Scheduler steps 2–3
+   instead: there the path sits in quotes in the Arguments field.
 5. Stop: Task Scheduler → right-click "Atlas daily" → **Disable** or **Delete** (or `schtasks /Delete /TN "Atlas daily"`).
