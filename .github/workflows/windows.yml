@@ -15,6 +15,8 @@ jobs:
         node: [ '18', '22' ]
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
@@ -24,6 +26,22 @@ jobs:
           node --version; git --version; $PSVersionTable.PSVersion
           "core.autocrlf=$(git config core.autocrlf)"
           git ls-files --eol site/content/products/orange-and-clove.md ledger.json
+      - name: EOL diagnosis — build in a clone WITHOUT .gitattributes (as the starter ships today)
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $d = Join-Path $env:RUNNER_TEMP 'eol'
+          $sha = (git rev-parse HEAD~1).Trim()
+          git clone -q --no-checkout . $d
+          Set-Location $d
+          git checkout -q $sha
+          "commit: $(git log --oneline -1)  .gitattributes present: $(Test-Path .gitattributes)"
+          git ls-files --eol docs/robots.txt
+          node site/build.mjs | Select-Object -Last 1
+          "status after build:"; git status --porcelain | Measure-Object | ForEach-Object { "  $($_.Count) files modified" }
+          git diff --stat -- docs/robots.txt
+          "robots.txt bytes (first 40):"; ([IO.File]::ReadAllBytes((Join-Path $d "docs/robots.txt")) | Select-Object -First 40) -join ' '
+          git diff -- docs/robots.txt | Select-Object -First 12
       - name: Build the stand-in claude.exe (records its arguments; no model call)
         shell: powershell
         run: |
