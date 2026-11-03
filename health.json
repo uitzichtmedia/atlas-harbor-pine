@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-03T08:24:31.460Z",
+  "checked_at": "2026-11-03T08:25:37.308Z",
   "status": "HEALTHY",
   "stop": false,
   "problems": [],
@@ -14,12 +14,12 @@
   "ledger": {
     "items": 6,
     "counts": {
-      "DONE": 1,
-      "READY": 5
+      "DONE": 2,
+      "READY": 4
     },
     "stale": []
   },
-  "runs_today": 2,
+  "runs_today": 3,
   "runs": [
     {
       "at": "2026-11-02T21:53:52.000Z",
@@ -44,6 +44,11 @@
     {
       "at": "2026-11-03T08:24:31.460Z",
       "run": "execute",
+      "status": "HEALTHY"
+    },
+    {
+      "at": "2026-11-03T08:25:37.308Z",
+      "run": "brief",
       "status": "HEALTHY"
     }
   ],
