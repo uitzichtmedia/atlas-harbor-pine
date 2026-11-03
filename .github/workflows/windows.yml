@@ -1,0 +1,100 @@
+# B27 — Windows compatibility check for the course (branch ci/windows only; never merged into main).
+name: windows-course-check
+on:
+  push:
+    branches: [ 'ci/windows' ]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [ '18', '22' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Versions and line endings
+        shell: pwsh
+        run: |
+          node --version; git --version; $PSVersionTable.PSVersion
+          "core.autocrlf=$(git config core.autocrlf)"
+          git ls-files --eol site/content/products/orange-and-clove.md ledger.json
+      - name: Build the stand-in claude.exe (records its arguments; no model call)
+        shell: powershell
+        run: |
+          $env:FAKEBIN = "$env:RUNNER_TEMP\fakebin"
+          "FAKEBIN=$env:FAKEBIN" | Out-File -Append -Encoding ascii $env:GITHUB_ENV
+          New-Item -ItemType Directory -Force $env:FAKEBIN | Out-Null
+          Add-Type -TypeDefinition (Get-Content -Raw ci-fixtures\fake-claude.cs) -OutputAssembly "$env:FAKEBIN\claude.exe" -OutputType ConsoleApplication
+          & "$env:FAKEBIN\claude.exe" a "b c"
+      - name: node --test (full suite)
+        id: tests
+        continue-on-error: true
+        shell: pwsh
+        run: node --test
+      - name: node site/build.mjs + collect-site --local=docs
+        id: build
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          node site/build.mjs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node ops/collect-site.mjs --local=docs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git status --short
+      - name: Course commands in PowerShell 7 (pwsh)
+        id: cmd_pwsh
+        continue-on-error: true
+        shell: pwsh
+        run: ./ci-fixtures/course-commands.ps1 -Label "pwsh-node${{ matrix.node }}"
+      - name: Course commands in Windows PowerShell 5.1
+        id: cmd_ps51
+        continue-on-error: true
+        shell: powershell
+        run: .\ci-fixtures\course-commands.ps1 -Label "ps51-node${{ matrix.node }}"
+      - name: run-atlas.ps1 as shipped — Windows PowerShell 5.1
+        id: wr_orig_51
+        continue-on-error: true
+        shell: powershell
+        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "orig-ps51-node${{ matrix.node }}"
+      - name: run-atlas.ps1 as shipped — pwsh
+        id: wr_orig_7
+        continue-on-error: true
+        shell: pwsh
+        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper scheduling\self-hosted\run-atlas.ps1 -Label "orig-pwsh-node${{ matrix.node }}"
+      - name: run-atlas.ps1 candidate fix — Windows PowerShell 5.1
+        id: wr_fix_51
+        continue-on-error: true
+        shell: powershell
+        run: .\ci-fixtures\wrapper-test.ps1 -Exe powershell -Wrapper ci-fixtures\run-atlas.fixed.ps1 -Label "fix-ps51-node${{ matrix.node }}"
+      - name: run-atlas.ps1 candidate fix — pwsh
+        id: wr_fix_7
+        continue-on-error: true
+        shell: pwsh
+        run: ./ci-fixtures/wrapper-test.ps1 -Exe pwsh -Wrapper ci-fixtures\run-atlas.fixed.ps1 -Label "fix-pwsh-node${{ matrix.node }}"
+      - name: L3.1 W4-W6 install Claude Code (official script) and verify — Windows PowerShell 5.1
+        id: install
+        if: matrix.node == '22'
+        continue-on-error: true
+        shell: powershell
+        run: |
+          irm https://claude.ai/install.ps1 | iex
+          $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+          [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+          $userPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+          "user PATH ends with: " + $userPath.Substring([Math]::Max(0, $userPath.Length - 60))
+          & "$env:USERPROFILE\.local\bin\claude.exe" --version
+          "claude --version exit: $LASTEXITCODE"
+          $p = Start-Process -FilePath "$env:USERPROFILE\.local\bin\claude.exe" -ArgumentList 'doctor' -NoNewWindow -PassThru
+          if (-not $p.WaitForExit(60000)) { "claude doctor: still running after 60 s (interactive), stopped"; $p.Kill() } else { "claude doctor exit: $($p.ExitCode)" }
+      - name: Summary
+        if: always()
+        shell: pwsh
+        run: |
+          Get-ChildItem $env:RUNNER_TEMP -Filter 'results-*.txt' | ForEach-Object { Get-Content $_.FullName }
+          "steps: tests=${{ steps.tests.outcome }} build=${{ steps.build.outcome }} cmd_pwsh=${{ steps.cmd_pwsh.outcome }} cmd_ps51=${{ steps.cmd_ps51.outcome }} wr_orig_51=${{ steps.wr_orig_51.outcome }} wr_orig_7=${{ steps.wr_orig_7.outcome }} wr_fix_51=${{ steps.wr_fix_51.outcome }} wr_fix_7=${{ steps.wr_fix_7.outcome }} install=${{ steps.install.outcome }}"
