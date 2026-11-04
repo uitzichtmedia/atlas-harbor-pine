@@ -90,7 +90,7 @@
       "title": "Make travel tin title unique",
       "priority": 2,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_title",
@@ -109,10 +109,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-04T08:24:54.633Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-04T08:26:10.253Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-04T08:26:10.318Z"
         }
       ],
       "started_at": "2026-11-04T08:24:54.633Z",
-      "updated_at": "2026-11-04T08:24:54.633Z"
+      "updated_at": "2026-11-04T08:26:10.318Z",
+      "output": "site/content/products/pine-forest-travel-tin.md: title changed in commit 6c602df",
+      "verification": "evidence/verify-title-pine-forest-travel-tin-20261104T082606Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-travel-tin/"
     },
     {
       "id": "meta-amber-evening",

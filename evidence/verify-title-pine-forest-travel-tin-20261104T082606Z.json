@@ -1,0 +1,46 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-travel-tin/",
+  "passed": true,
+  "started_at": "2026-11-04T08:25:06.006Z",
+  "finished_at": "2026-11-04T08:26:06.604Z",
+  "must_contain": [
+    "<title>Pine Forest Travel Tin Soy Candle</title>"
+  ],
+  "must_not_contain": [
+    "<title>Pine Forest Soy Candle</title>"
+  ],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-04T08:25:06.006Z",
+      "status": 200,
+      "missing": [
+        "<title>Pine Forest Travel Tin Soy Candle</title>"
+      ],
+      "forbidden": [
+        "<title>Pine Forest Soy Candle</title>"
+      ]
+    },
+    {
+      "n": 2,
+      "at": "2026-11-04T08:25:36.262Z",
+      "status": 200,
+      "missing": [
+        "<title>Pine Forest Travel Tin Soy Candle</title>"
+      ],
+      "forbidden": [
+        "<title>Pine Forest Soy Candle</title>"
+      ]
+    },
+    {
+      "n": 3,
+      "at": "2026-11-04T08:26:06.385Z",
+      "status": 200,
+      "missing": [],
+      "forbidden": []
+    }
+  ],
+  "id": "title-pine-forest-travel-tin"
+}
