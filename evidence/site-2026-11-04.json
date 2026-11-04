@@ -1,0 +1,189 @@
+{
+  "kind": "site",
+  "collected_at": "2026-11-04T08:24:28.988Z",
+  "mode": "live",
+  "base": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+  "site_base": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+  "seo": {
+    "title_max": 60,
+    "meta_min": 70,
+    "meta_max": 160
+  },
+  "sitemap": {
+    "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/sitemap.xml",
+    "status": 200
+  },
+  "pages": [
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+      "path": "/",
+      "status": 200,
+      "title": "Harbor & Pine Candles — Hand-poured soy candles",
+      "title_length": 47,
+      "meta_description": "Hand-poured soy candles and wax melts with calm, natural scents. A fictional demo catalogue used to teach AI operators.",
+      "meta_description_length": 119,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/",
+      "source": null,
+      "h1_count": 1,
+      "images_without_alt": [
+        "images/linen-morning.svg"
+      ],
+      "broken_links": [],
+      "issues": [
+        "IMG_ALT_MISSING"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/amber-evening/",
+      "path": "/products/amber-evening/",
+      "status": 200,
+      "title": "Amber Evening Candle",
+      "title_length": 20,
+      "meta_description": "Warm amber candle.",
+      "meta_description_length": 18,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/amber-evening/",
+      "source": "site/content/products/amber-evening.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": [
+        "META_TOO_SHORT"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/cedar-and-sea-salt/",
+      "path": "/products/cedar-and-sea-salt/",
+      "status": 200,
+      "title": "Cedar & Sea Salt Soy Candle",
+      "title_length": 27,
+      "meta_description": "Hand-poured soy candle with notes of cedarwood, sea salt and driftwood. Burns cleanly for about 45 hours. A calm, coastal scent for any room.",
+      "meta_description_length": 141,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/cedar-and-sea-salt/",
+      "source": "site/content/products/cedar-and-sea-salt.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": []
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/lavender-hearth/",
+      "path": "/products/lavender-hearth/",
+      "status": 200,
+      "title": "Lavender Hearth Candle",
+      "title_length": 22,
+      "meta_description": "Lavender soy candle, 200 g.",
+      "meta_description_length": 27,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/lavender-hearth/",
+      "source": "site/content/products/lavender-hearth.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": [
+        "META_TOO_SHORT"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/linen-morning/",
+      "path": "/products/linen-morning/",
+      "status": 200,
+      "title": "Linen Morning Soy Candle",
+      "title_length": 24,
+      "meta_description": "A fresh, airy soy candle that smells of clean linen, white tea and a touch of bergamot. Hand-poured, 200 g, around 45 hours of burn time.",
+      "meta_description_length": 137,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/linen-morning/",
+      "source": "site/content/products/linen-morning.md",
+      "h1_count": 1,
+      "images_without_alt": [
+        "../../images/linen-morning.svg"
+      ],
+      "broken_links": [],
+      "issues": [
+        "IMG_ALT_MISSING"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/orange-and-clove/",
+      "path": "/products/orange-and-clove/",
+      "status": 200,
+      "title": "Orange & Clove Winter Candle",
+      "title_length": 28,
+      "meta_description": "Sweet orange, clove and cinnamon bark in a frosted glass jar. 200 g of soy wax with around 45 hours of burn time. Our winter kitchen in a jar.",
+      "meta_description_length": 142,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/orange-and-clove/",
+      "source": "site/content/products/orange-and-clove.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": []
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-large/",
+      "path": "/products/pine-forest-large/",
+      "status": 200,
+      "title": "Pine Forest Soy Candle",
+      "title_length": 22,
+      "meta_description": "Large three-wick soy candle with Scots pine, fir needles and a hint of smoke. Around 60 hours of burn time. Our most-gifted winter scent.",
+      "meta_description_length": 137,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-large/",
+      "source": "site/content/products/pine-forest-large.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": [
+        "TITLE_DUPLICATE"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-travel-tin/",
+      "path": "/products/pine-forest-travel-tin/",
+      "status": 200,
+      "title": "Pine Forest Soy Candle",
+      "title_length": 22,
+      "meta_description": "Our Pine Forest scent in a small travel tin: Scots pine, fir needles and woodsmoke. 100 g of soy wax, about 20 hours of burn time.",
+      "meta_description_length": 130,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-travel-tin/",
+      "source": "site/content/products/pine-forest-travel-tin.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": [
+        "TITLE_DUPLICATE"
+      ]
+    },
+    {
+      "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/wild-fig-wax-melts/",
+      "path": "/products/wild-fig-wax-melts/",
+      "status": 200,
+      "title": "Wild Fig Wax Melts",
+      "title_length": 18,
+      "meta_description": "Wax melts with ripe fig, green leaves and a hint of cedar. Six soy wax melts per pack, in plastic-free packaging, for an oil burner or warmer.",
+      "meta_description_length": 142,
+      "canonical": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/wild-fig-wax-melts/",
+      "source": "site/content/products/wild-fig-wax-melts.md",
+      "h1_count": 1,
+      "images_without_alt": [],
+      "broken_links": [],
+      "issues": []
+    }
+  ],
+  "duplicate_titles": [
+    {
+      "title": "Pine Forest Soy Candle",
+      "urls": [
+        "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-large/",
+        "https://uitzichtmedia.github.io/atlas-harbor-pine/products/pine-forest-travel-tin/"
+      ]
+    }
+  ],
+  "summary": {
+    "pages": 9,
+    "pages_ok": 9,
+    "pages_with_issues": 6,
+    "issues": {
+      "IMG_ALT_MISSING": 2,
+      "META_TOO_SHORT": 2,
+      "TITLE_DUPLICATE": 2
+    }
+  },
+  "errors": []
+}
