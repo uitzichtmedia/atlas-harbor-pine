@@ -1,0 +1,35 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/amber-evening/",
+  "passed": true,
+  "started_at": "2026-11-05T08:25:22.622Z",
+  "finished_at": "2026-11-05T08:25:53.263Z",
+  "must_contain": [
+    "<meta name=\"description\" content=\"Warm amber, vanilla bean and a little smoked wood. A 200 g soy candle in a smoky glass jar, with about 45 hours of burn time.\">"
+  ],
+  "must_not_contain": [
+    "<meta name=\"description\" content=\"Warm amber candle.\">"
+  ],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-05T08:25:22.622Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"Warm amber, vanilla bean and a little smoked wood. A 200 g soy candle in a smoky glass jar, with about 45 hours of burn time.\">"
+      ],
+      "forbidden": [
+        "<meta name=\"description\" content=\"Warm amber candle.\">"
+      ]
+    },
+    {
+      "n": 2,
+      "at": "2026-11-05T08:25:53.061Z",
+      "status": 200,
+      "missing": [],
+      "forbidden": []
+    }
+  ],
+  "id": "meta-amber-evening"
+}

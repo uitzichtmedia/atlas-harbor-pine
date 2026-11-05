@@ -132,7 +132,7 @@
       "title": "Rewrite too-short Amber Evening meta description",
       "priority": 3,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -151,10 +151,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-05T08:25:03.836Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-05T08:26:03.654Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-05T08:26:03.727Z"
         }
       ],
       "started_at": "2026-11-05T08:25:03.836Z",
-      "updated_at": "2026-11-05T08:25:03.836Z"
+      "updated_at": "2026-11-05T08:26:03.727Z",
+      "output": "site/content/products/amber-evening.md: meta_description changed in commit 82d4a98",
+      "verification": "evidence/verify-meta-amber-evening-20261105T082553Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/amber-evening/"
     },
     {
       "id": "meta-lavender-hearth",
