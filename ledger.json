@@ -174,7 +174,7 @@
       "title": "Rewrite too-short Lavender Hearth meta description",
       "priority": 3,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_meta_description",
@@ -193,10 +193,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-06T08:23:57.633Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-06T08:24:42.399Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-06T08:24:42.441Z"
         }
       ],
       "started_at": "2026-11-06T08:23:57.633Z",
-      "updated_at": "2026-11-06T08:23:57.633Z"
+      "updated_at": "2026-11-06T08:24:42.441Z",
+      "output": "site/content/products/lavender-hearth.md: meta_description changed in commit 9d2a3e8",
+      "verification": "evidence/verify-meta-lavender-hearth-20261106T082437Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/lavender-hearth/"
     },
     {
       "id": "alt-linen-morning",

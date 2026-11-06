@@ -1,0 +1,35 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/lavender-hearth/",
+  "passed": true,
+  "started_at": "2026-11-06T08:24:06.921Z",
+  "finished_at": "2026-11-06T08:24:37.358Z",
+  "must_contain": [
+    "<meta name=\"description\" content=\"French lavender, chamomile and soft musk in a hand-poured soy candle. A calm scent for the end of the day, in a frosted lilac jar.\">"
+  ],
+  "must_not_contain": [
+    "<meta name=\"description\" content=\"Lavender soy candle, 200 g.\">"
+  ],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-06T08:24:06.921Z",
+      "status": 200,
+      "missing": [
+        "<meta name=\"description\" content=\"French lavender, chamomile and soft musk in a hand-poured soy candle. A calm scent for the end of the day, in a frosted lilac jar.\">"
+      ],
+      "forbidden": [
+        "<meta name=\"description\" content=\"Lavender soy candle, 200 g.\">"
+      ]
+    },
+    {
+      "n": 2,
+      "at": "2026-11-06T08:24:37.228Z",
+      "status": 200,
+      "missing": [],
+      "forbidden": []
+    }
+  ],
+  "id": "meta-lavender-hearth"
+}
