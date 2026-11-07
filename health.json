@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T08:23:59.104Z",
+  "checked_at": "2026-11-07T08:24:12.552Z",
   "status": "HEALTHY",
   "stop": false,
   "problems": [],
@@ -19,7 +19,7 @@
     },
     "stale": []
   },
-  "runs_today": 1,
+  "runs_today": 2,
   "runs": [
     {
       "at": "2026-11-02T21:53:52.000Z",
@@ -99,6 +99,11 @@
     {
       "at": "2026-11-07T08:23:52.782Z",
       "run": "plan",
+      "status": "HEALTHY"
+    },
+    {
+      "at": "2026-11-07T08:24:12.552Z",
+      "run": "execute",
       "status": "HEALTHY"
     }
   ],

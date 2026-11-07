@@ -216,7 +216,7 @@
       "title": "Add alt text to Linen Morning photo",
       "priority": 3,
       "route": "executor",
-      "state": "EXECUTING",
+      "state": "DONE",
       "not_before": null,
       "goal": "G1",
       "action": "edit_image_alt",
@@ -235,10 +235,23 @@
           "from": "READY",
           "to": "EXECUTING",
           "at": "2026-11-07T08:24:17.632Z"
+        },
+        {
+          "from": "EXECUTING",
+          "to": "VERIFIED",
+          "at": "2026-11-07T08:25:01.299Z"
+        },
+        {
+          "from": "VERIFIED",
+          "to": "DONE",
+          "at": "2026-11-07T08:25:01.342Z"
         }
       ],
       "started_at": "2026-11-07T08:24:17.632Z",
-      "updated_at": "2026-11-07T08:24:17.632Z"
+      "updated_at": "2026-11-07T08:25:01.342Z",
+      "output": "site/content/products/linen-morning.md: image_alt changed in commit 60e97e0",
+      "verification": "evidence/verify-alt-linen-morning-20261107T082456Z.json PASS",
+      "external_result": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/linen-morning/"
     }
   ]
 }

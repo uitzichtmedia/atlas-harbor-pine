@@ -1,0 +1,31 @@
+{
+  "kind": "verify",
+  "url": "https://uitzichtmedia.github.io/atlas-harbor-pine/products/linen-morning/",
+  "passed": true,
+  "started_at": "2026-11-07T08:24:26.438Z",
+  "finished_at": "2026-11-07T08:24:56.732Z",
+  "must_contain": [
+    "alt=\"Linen Morning soy candle in a clear glass jar with a bamboo lid and a cotton wick\""
+  ],
+  "must_not_contain": [],
+  "wait_minutes": 1.5,
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-11-07T08:24:26.438Z",
+      "status": 200,
+      "missing": [
+        "alt=\"Linen Morning soy candle in a clear glass jar with a bamboo lid and a cotton wick\""
+      ],
+      "forbidden": []
+    },
+    {
+      "n": 2,
+      "at": "2026-11-07T08:24:56.589Z",
+      "status": 200,
+      "missing": [],
+      "forbidden": []
+    }
+  ],
+  "id": "alt-linen-morning"
+}
