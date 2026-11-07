@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-06T08:24:52.773Z",
+  "checked_at": "2026-11-07T08:23:59.104Z",
   "status": "HEALTHY",
   "stop": false,
   "problems": [],
   "warnings": [],
   "evidence": {
-    "file": "evidence/site-2026-11-06.json",
-    "collected_at": "2026-11-06T08:23:32.972Z",
+    "file": "evidence/site-2026-11-07.json",
+    "collected_at": "2026-11-07T08:23:58.079Z",
     "mode": "live",
     "age_hours": 0,
     "errors": []
@@ -19,7 +19,7 @@
     },
     "stale": []
   },
-  "runs_today": 3,
+  "runs_today": 1,
   "runs": [
     {
       "at": "2026-11-02T21:53:52.000Z",
@@ -94,6 +94,11 @@
     {
       "at": "2026-11-06T08:24:52.773Z",
       "run": "brief",
+      "status": "HEALTHY"
+    },
+    {
+      "at": "2026-11-07T08:23:52.782Z",
+      "run": "plan",
       "status": "HEALTHY"
     }
   ],
