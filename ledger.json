@@ -216,7 +216,7 @@
       "title": "Add alt text to Linen Morning photo",
       "priority": 3,
       "route": "executor",
-      "state": "READY",
+      "state": "EXECUTING",
       "not_before": null,
       "goal": "G1",
       "action": "edit_image_alt",
@@ -230,7 +230,15 @@
       "acceptance": "Live page products/linen-morning/ serves the new alt text on the product image (verify-live --ledger-item)",
       "evidence": "evidence/site-2026-11-03.json",
       "created_at": "2026-11-03T08:24:13.985Z",
-      "history": []
+      "history": [
+        {
+          "from": "READY",
+          "to": "EXECUTING",
+          "at": "2026-11-07T08:24:17.632Z"
+        }
+      ],
+      "started_at": "2026-11-07T08:24:17.632Z",
+      "updated_at": "2026-11-07T08:24:17.632Z"
     }
   ]
 }
