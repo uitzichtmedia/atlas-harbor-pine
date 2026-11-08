@@ -1,32 +1,24 @@
 # GOALS-AND-KPIS — what we aim for and how we will know
 
-> **Guidance (Claude replaces this).** 2–3 goals, each with a number, a baseline and a date. For each goal name KPIs
-> at **three levels**, because they are easy to confuse:
-> - **Task done** — the work happened and is verified (e.g. "4 product pages rewritten, checked live").
-> - **Intermediate result** — the outside world reacted (clicks, visits, sign-ups, enquiries).
-> - **Commercial outcome** — money or customers (orders, contribution, repeat purchases).
-> A click is not a sale. Never present a level-1 or level-2 win as a level-3 result. A baseline you do not have yet is
-> "unknown — collect in week 1", never a guess. Use data you already have; no dashboards for their own sake.
+Harbor & Pine Candles · own shop (8 product pages) plus one marketplace · UK and EU gift buyers.
+Baselines below are your own figures from the interview (source: owner statement, Oct 2026); Claude re-checks each
+against the shop export in week 1.
 
 ## Goals
 | Goal | Baseline (date, source) | Target | By |
 |---|---|---|---|
+| G1 More orders from search | about 62 orders/month (Oct 2026, owner estimate from the export's referrer column; not checked) | 85 orders/month | 2027-01-31 |
+| G2 Convert December gift traffic | 140 own-shop orders (Oct 2026, owner statement) | 190 own-shop orders in December | 2026-12-31 |
+| G3 Keep proven sellers buyable | Pine Forest Soy Candle, Amber Evening, Orange & Clove: 3 unbuyable days in Oct 2026 (owner statement) | 0 unbuyable days | ongoing |
+
+Not yet known: search clicks and click-through per page (search data not connected) · marketplace share of orders ·
+December 2025 orders (unknown — collect in week 1).
 
 ## KPIs at three levels
 | Goal | Task done | Intermediate result | Commercial outcome | Source | Read when |
 |---|---|---|---|---|---|
+| G1 | meta descriptions / alt text changed on named pages, checked on the built page | search clicks and click-through for those pages | orders from search per month | search export (to be provided), shop export | weekly; verdict 28 days after the last change |
+| G2 | pages ready for gift buyers, checked live; gift guide only if you approve publishing | visits to gift-related pages; product-page visits | own-shop orders in December | shop export, shop analytics | weekly in Nov–Dec |
+| G3 | daily buyability check ran and was logged | a problem found and fixed within one day | best-seller orders hold; unbuyable days | page checks, shop export | daily; summary weekly |
 
----
-
-## Example — Harbor & Pine Candles (illustrative numbers)
-| Goal | Baseline (date, source) | Target | By |
-|---|---|---|---|
-| G1 More orders from search | 62 search orders/month (Oct 2026, shop export) | 85/month | 2027-01-31 |
-| G2 Convert December gift traffic | 140 own-shop orders/month (Oct 2026, shop export) | 190 in December | 2026-12-31 |
-| G3 Keep proven sellers buyable | Pine Forest, Amber Evening, Orange & Clove: 3 unbuyable days in Oct | 0 days | ongoing |
-
-| Goal | Task done | Intermediate result | Commercial outcome | Source | Read when |
-|---|---|---|---|---|---|
-| G1 | product pages improved and checked live | search clicks and click-through to those pages | orders from search | search data, shop export | weekly; verdict at 28 days |
-| G2 | gift guide live (Sam publishes) | guide visits; guide → product clicks | own-shop orders in December | shop analytics | weekly |
-| G3 | daily buyability check ran | problems found and fixed within a day | best-seller orders hold | shop, checks | daily |
+A click is not a sale: a G1/G2 intermediate win is never reported as a commercial result.
