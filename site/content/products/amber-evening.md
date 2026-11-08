@@ -1,7 +1,7 @@
 ---
 slug: amber-evening
 title: Amber Evening Candle
-meta_description: "Warm amber candle."
+meta_description: "Amber Evening: warm amber, vanilla bean and smoked wood in a 200 g soy wax candle, about 45 hours of burn time. A cosy gift for long evenings."
 price_eur: 28
 image_alt: "Lit candle in a smoky glass jar next to a stack of books"
 ---
