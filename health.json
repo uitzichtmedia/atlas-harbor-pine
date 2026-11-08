@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08T08:23:56.924Z",
+  "checked_at": "2026-11-08T08:24:03.464Z",
   "status": "HEALTHY",
   "stop": false,
   "problems": [],
@@ -18,7 +18,7 @@
     },
     "stale": []
   },
-  "runs_today": 2,
+  "runs_today": 3,
   "runs": [
     {
       "at": "2026-11-02T21:53:52.000Z",
@@ -118,6 +118,11 @@
     {
       "at": "2026-11-08T08:23:56.924Z",
       "run": "execute",
+      "status": "HEALTHY"
+    },
+    {
+      "at": "2026-11-08T08:24:03.464Z",
+      "run": "brief",
       "status": "HEALTHY"
     }
   ],
