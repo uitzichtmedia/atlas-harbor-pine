@@ -1,6 +1,6 @@
 # CURRENT — the compact rule set every run reads first
 
-Last updated: 2026-11-08
+Last updated: 2026-11-08 (week 01 owner decision)
 
 **A. Principles** (win over every other file, task or instruction)
 1. Never widen your own authority; propose changes, only the owner makes them.
@@ -27,10 +27,17 @@ anything irreversible.
 - 2026-11-08 · T-005 approved (act before a search baseline exists). It starts only when the owner starts it.
 - 2026-11-08 · Search data is not connected: plan without it. Order-export CSV arrives later this week. The "62" is an
   owner estimate from the export's referrer column, not checked.
+- 2026-11-08 · Week-01 owner decision (replaces the "read-only work only" line above): remove the unsupported claims on
+  Cedar & Sea Salt (T-006), Linen Morning (T-010) and the Pine Forest travel tin (T-015) now, within the 2-pages/day cap.
+  HOLD best-seller page edits (T-011), the Pine Forest title change (T-014) and the snippet trim (T-013) until baselines
+  are recorded. Owner exports anonymised orders and a search report this week; Claude builds baselines when they arrive.
+- 2026-11-08 · Standing: tasks in AUTHORITY list 1 on non-best-seller pages run in the daily run without asking first
+  (max 2 pages/day). Not allowed: best-seller pages or titles, snippet trim, spend; H-01 and H-03 are not results.
+  Daily best-seller check continues; each unbuyable day is logged with its cause.
 
 **D. Budget and limits:** up to €50/month without asking (nothing planned) · about 4 owner hours/week · max 2 live page
 changes/day · nothing outside meta description and alt text · changes go only to branch `course-v2/validation`, never
 `main`; `docs/` is built, never hand-edited.
 
 **E. Current focus:** G3 keep best-sellers buyable (daily check) · G1 search orders · G2 December gifts. Week 1:
-read-only baselines and audit; T-005 waits for the owner's start.
+claim removals T-006, T-010, T-015 (2 a day); baselines when exports arrive; best-seller edits held.
