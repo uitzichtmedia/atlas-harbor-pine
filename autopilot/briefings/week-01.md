@@ -1,5 +1,5 @@
 # Weekly briefing — week 01 (2026-11-08)
-**D** data · **I** interpretation · **H** hypothesis · **C** conclusion. Source: `autopilot/` files, built `docs/`, 2026-11-08.
+**D** data · **I** interpretation · **H** hypothesis · **C** conclusion.
 
 ## What changed
 - **D** Two meta descriptions rewritten and pushed to `course-v2/validation`: Pine Forest (T-005, 74f32a2) and Amber Evening (T-007, 1294c05). Old text in `snapshots/`. Not on the public site (it shows only `main`).
@@ -7,8 +7,7 @@
 
 ## What we learned
 - **Measurement health (D):** no commercial KPI is connected. Order export (T-003) and search data (T-004) are missing, so G1, G2 and the G3 shop side are **unknown, not zero**. The "62" is an unchecked owner estimate. Public-site check failed twice (proxy), so T-001 has file proof only.
-- **I:** setup week; nothing can be judged yet.
-- **Proven revenue (C):** cannot be checked, no sales data. A drop on the two changed pages would stay invisible until the export arrives.
+- **Proven revenue (C):** cannot be checked yet.
 
 ## KPIs (week 1 · last week · baseline · target)
 | Level | Goal | This week | Last | Baseline | Target |
@@ -27,7 +26,7 @@
 - **H-03:** day 1 of 30, ends 2026-12-08; baseline 3 days (owner statement); real shop buyability not observable.
 
 ## Decision recorded (owner, 2026-11-08)
-Claims out now (T-006, T-010, T-015); best-seller edits (T-011), title (T-014) and snippet trim (T-013) held until baselines exist. Logged in CURRENT C and DECISIONS.
+Claims out now (T-006, T-010, T-015); T-011, T-014, T-013 held until baselines exist.
 
 ## Next best move
 - Daily runs: T-006 and T-010 on 2026-11-09, T-015 on 11-10 (the 2-a-day cap is used up today). No ask needed.
@@ -36,4 +35,4 @@ Claims out now (T-006, T-010, T-015); best-seller edits (T-011), title (T-014) a
 ## Owner needed
 - Drop the anonymised order CSV and the page-level search report in the Autopilot folder this week. Nothing else.
 
-**Housekeeping:** CURRENT part C updated; DECISIONS created. No new hypothesis (claim removal is a correction, not a test). H-01/H-03 carry no result. **Strategy check:** no trigger fired.
+**Housekeeping:** CURRENT C updated, DECISIONS created; CURRENT is now ~520 words (compact-file check: owner to prune). No new hypothesis; H-01/H-03 carry no result. **Strategy check:** no trigger fired.
