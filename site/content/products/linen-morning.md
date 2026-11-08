@@ -1,7 +1,6 @@
 ---
 slug: linen-morning
 title: Linen Morning Soy Candle
-image_alt: "Linen Morning soy candle in a clear glass jar with a bamboo lid and a cotton wick"
 meta_description: "A fresh, airy soy candle that smells of clean linen, white tea and a touch of bergamot. Hand-poured, 200 g, around 45 hours of burn time."
 price_eur: 24
 ---
