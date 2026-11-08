@@ -1,7 +1,7 @@
 ---
 slug: pine-forest-large
 title: Pine Forest Soy Candle
-meta_description: "Large three-wick soy candle with Scots pine, fir needles and a hint of smoke. Around 60 hours of burn time. Our most-gifted winter scent."
+meta_description: "A large three-wick soy candle to give or keep: Scots pine, fir needles and a hint of woodsmoke in a green glass bowl. 500 g soy wax, around 60 hours of burn time."
 price_eur: 39
 image_alt: "Large three-wick candle in a green glass bowl surrounded by pine cones"
 ---
