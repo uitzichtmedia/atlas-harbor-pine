@@ -1,7 +1,7 @@
 ---
 slug: cedar-and-sea-salt
 title: Cedar & Sea Salt Soy Candle
-meta_description: "Hand-poured soy candle with notes of cedarwood, sea salt and driftwood. Burns cleanly for about 45 hours. A calm, coastal scent for any room."
+meta_description: "Cedar & Sea Salt: cedarwood, sea salt and driftwood in a hand-poured soy wax candle, 200 g amber glass jar with a reusable lid. A walk along the dunes."
 price_eur: 26
 image_alt: "Amber glass jar candle labelled Cedar & Sea Salt on a wooden shelf"
 ---
