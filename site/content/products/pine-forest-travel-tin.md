@@ -1,7 +1,7 @@
 ---
 slug: pine-forest-travel-tin
 title: Pine Forest Soy Candle
-meta_description: "Our Pine Forest scent in a small travel tin: Scots pine, fir needles and woodsmoke. 100 g of soy wax, about 20 hours of burn time."
+meta_description: "Pine Forest travel tin: the same Pine Forest scent in a 100 g tin with about 20 hours of burn time. Easy to pack, and a good first try before the large bowl."
 price_eur: 12
 image_alt: "Small silver travel tin candle with a pine sprig on the lid"
 ---
