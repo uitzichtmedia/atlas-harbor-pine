@@ -1,7 +1,7 @@
 ---
 slug: lavender-hearth
 title: Lavender Hearth Candle
-meta_description: "Lavender soy candle, 200 g."
+meta_description: "Lavender Hearth: French lavender, chamomile and a soft musk in hand-poured soy wax, in a frosted lilac jar. About 45 hours of burn time."
 price_eur: 25
 image_alt: "Lilac-coloured candle on a bedside table beside a sprig of lavender"
 ---
